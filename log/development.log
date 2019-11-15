@@ -586,3 +586,353 @@ Processing by AuthController#create as */*
 Completed 202 Accepted in 391ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1039)
 
 
+Started POST "/login" for 127.0.0.1 at 2019-11-14 17:09:24 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.15ms)
+Completed 202 Accepted in 401ms (Views: 4.2ms | ActiveRecord: 2.6ms | Allocations: 8470)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 17:09:33 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"blarg", "password"=>"[FILTERED]", "auth"=>{"username"=>"blarg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "blarg"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 401 Unauthorized in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 723)
+
+
+Started GET "/e73f06ba90ac8355455c.hot-update.json" for 127.0.0.1 at 2019-11-14 17:13:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/e73f06ba90ac8355455c.hot-update.json"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2019-11-14 17:13:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js.map" for 127.0.0.1 at 2019-11-14 17:13:28 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js.map"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2019-11-14 17:13:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2019-11-14 17:15:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for 127.0.0.1 at 2019-11-14 18:10:27 -0700
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Daemon", "name"=>"Damon", "location"=>"Detroit", "password"=>"[FILTERED]", "user"=>{"name"=>"Damon", "username"=>"Daemon", "location"=>"Detroit"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Damon"], ["username", "Daemon"], ["location", "Detroit"], ["password_digest", "$2a$12$2siQLBvdUqPAdDf7xGvdSOalTkyxbNP/BXbulev.RKWXpd.rkiGf2"], ["created_at", "2019-11-15 01:10:28.293127"], ["updated_at", "2019-11-15 01:10:28.293127"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.67ms)
+Completed 201 Created in 419ms (Views: 3.3ms | ActiveRecord: 5.1ms | Allocations: 7621)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 18:10:47 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.74ms)
+Completed 202 Accepted in 388ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1484)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 18:39:34 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.94ms)
+Completed 202 Accepted in 401ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 1016)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 18:41:02 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.52ms)
+Completed 202 Accepted in 385ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 1002)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 19:46:41 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.71ms)
+Completed 202 Accepted in 384ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 1017)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 19:55:06 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.79ms)
+Completed 202 Accepted in 389ms (Views: 6.6ms | ActiveRecord: 0.5ms | Allocations: 1006)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 19:56:03 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.56ms)
+Completed 202 Accepted in 382ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 986)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 19:57:35 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.99ms)
+Completed 202 Accepted in 386ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 989)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 19:58:04 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.73ms)
+Completed 202 Accepted in 460ms (Views: 89.5ms | ActiveRecord: 0.2ms | Allocations: 988)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:01:03 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.62ms)
+Completed 202 Accepted in 375ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 988)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:26:34 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Damon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Damon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Damon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 401 Unauthorized in 7ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 726)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:27:00 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.35ms)
+Completed 202 Accepted in 376ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 985)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:33:14 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"damon", "password"=>"[FILTERED]", "auth"=>{"username"=>"damon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "damon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Completed 401 Unauthorized in 13ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 726)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:33:22 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.2ms)
+Completed 202 Accepted in 375ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 989)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:50:02 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.78ms)
+Completed 202 Accepted in 377ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1005)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:50:12 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.58ms)
+Completed 202 Accepted in 357ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 986)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:52:15 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.39ms)
+Completed 202 Accepted in 388ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 985)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:54:38 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.98ms)
+Completed 202 Accepted in 370ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 985)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 20:58:41 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Daemon", "password"=>"[FILTERED]", "auth"=>{"username"=>"Daemon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daemon"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.11ms)
+Completed 202 Accepted in 392ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 985)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-11-14 21:02:10 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"Yardmeat", "password"=>"[FILTERED]", "auth"=>{"username"=>"Yardmeat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Yardmeat"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.68ms)
+Completed 202 Accepted in 419ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 986)
+
+
